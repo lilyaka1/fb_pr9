@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, ini                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Подвал -->
+        <footer class="page__footer">
+            <div class="container">
+                <p>&copy; 2025 Моё портфолио</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Переключение темы
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('themeToggle');
+            const body = document.body;
+            
+            // Проверяем сохраненную тему
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            setTheme(savedTheme);
+            
+            themeToggle.addEventListener('click', function() {
+                const currentTheme = body.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                setTheme(newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+            
+            function setTheme(theme) {
+                body.setAttribute('data-theme', theme);
+                
+                if (theme === 'dark') {
+                    themeToggle.textContent = '☀️';
+                } else {
+                    themeToggle.textContent = '🌙';
+                }
+            }
+        });
+    </script>
+</body>
+</html>1.0">
+    <title>Товары - Портфолио V1</title>
+    <link rel="stylesheet" href="../style/styles_v1.css">
+    <link rel="stylesheet" href="../style/goods_v1.css">
+</head>
+<body>
+    <!-- Основной контейнер -->
+    <div class="page">
+        <!-- Шапка -->
+        <header class="page__header">
+            <div class="header__container">
+                <a href="../index_v1.html" class="header__logo">Каталог товаров</a>
+                
+                <!-- Навигация -->
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link" href="../index_v1.html">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="news.html">Новости</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link nav__link--active" href="goods_v1.html">Товары</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="contacts.html">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- Переключатель темы -->
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+        </header>
+
+        <!-- Основной контент -->
+        <main class="page__main">
+            <div class="container">
+                <!-- Секция товаров -->
+                <section class="goods">
+                    <h2 class="goods__title">Каталог мемов про Канье</h2>
+                    <div class="goods__grid">
+                    <!-- Обычная карточка -->
+                    <article class="product-card">
+                        <div class="product-card__image-wrapper">
+                            <img class="product-card__image" src="../images/kanye-meme-1.jpeg" alt="Imma let you finish">
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Imma let you finish</h3>
+                            <p class="product-card__price">99 ₽</p>
+                            <p class="product-card__description">Классический момент с церемонии — универсальный мем для любой «перебивки».</p>
+                        </div>
+                    </article>
+
+                    <!-- Карточка со скидкой -->
+                    <article class="product-card product-card--sale">
+                        <div class="product-card__badge">Скидка 20%</div>
+                        <div class="product-card__image-wrapper">
+                            <img class="product-card__image" src="../images/kanye-meme-2.jpg" alt="Kanye улыбается">
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Kanye улыбается</h3>
+                            <div class="product-card__prices">
+                                <p class="product-card__price-old">49 ₽</p>
+                                <p class="product-card__price">39 ₽</p>
+                            </div>
+                            <p class="product-card__description">Добродушная реакция Ye: подходит для «когда всё получилось».</p>
+                        </div>
+                    </article>
+
+                    <!-- Выбранная карточка -->
+                    <article class="product-card product-card--selected">
+                        <div class="product-card__badge product-card__badge--new">Новинка</div>
+                        <div class="product-card__image-wrapper">
+                            <img class="product-card__image" src="../images/kanye-meme-3.jpg" alt="Грустный Канье">
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Грустный Канье</h3>
+                            <p class="product-card__price">59 ₽</p>
+                            <p class="product-card__description">Когда планы не сработали, но держимся в стиле минимализма.</p>
+                        </div>
+                    </article>
+
+                    <!-- Вторая строка -->
+                    <article class="product-card">
+                        <div class="product-card__image-wrapper">
+                            <img class="product-card__image" src="../images/kanye-meme-4.jpeg" alt="Канье перебивает">
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Канье перебивает</h3>
+                            <p class="product-card__price">79 ₽</p>
+                            <p class="product-card__description">Идеально для «секунду, я вставлю ремарку…»</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card product-card--sale">
+                        <div class="product-card__badge">Скидка 15%</div>
+                        <div class="product-card__image-wrapper">
+                            <img class="product-card__image" src="../images/kanye-meme-6.jpg" alt="Kanye & Friends">
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Kanye & Friends</h3>
+                            <div class="product-card__prices">
+                                <p class="product-card__price-old">69 ₽</p>
+                                <p class="product-card__price">59 ₽</p>
+                            </div>
+                            <p class="product-card__description">Коллаб-кадр: универсальная реакция «мы в теме».</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card__image-wrapper">
+                            <img class="product-card__image" src="../images/kanye-meme-5.jpeg" alt="Kanye думает">
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Канье думает</h3>
+                            <p class="product-card__price">85 ₽</p>
+                            <p class="product-card__description">Глубокие размышления про жизнь и творчество.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- Подвал -->
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025 Моё портфолио</p>
+        </footer>
+    </div>
+</body>
+</html>

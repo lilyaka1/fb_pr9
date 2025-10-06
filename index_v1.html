@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Портфолио V1</title>
+    <link rel="stylesheet" href="style/styles_v1.css">
+</head>
+<body>
+    <!-- Основной контейнер -->
+    <div class="page">
+        <!-- Шапка -->
+        <header class="page__header">
+            <div class="header__container">
+                <a href="index_v1.html" class="header__logo">Моё портфолио</a>
+                
+                <!-- Навигация -->
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link nav__link--active" href="index_v1.html">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="pages/news.html">Новости</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="pages/goods_v1.html">Товары</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="pages/contacts.html">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- Переключатель темы -->
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+        </header>
+
+        <!-- Основной контент -->
+        <main class="page__main">
+            <div class="container">
+                <!-- Профиль -->
+                <section class="profile">
+                    <div class="profile__card">
+                        <img class="profile__photo" src="images/photo.jpg" alt="Фото">
+                        <div class="profile__info">
+                            <h2 class="profile__name">Сало Вячеслав Васильевич</h2>
+                            <p class="profile__group">ЭФБО-15-24</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Обо мне -->
+                <section class="about">
+                    <div class="about__content">
+                        <h2 class="about__title">Обо мне</h2>
+                        <div class="about__text-wrapper">
+                            <p class="about__text">
+                                Я родился и слушал Кани Веста. Кани Вест рано ударил в голову.
+                                В четыре активно советовал убегать от меня. Потом колледж, поздняя регистрация,
+                                выпуск, клей. Так я становился всё шизовей и сильней. Отмывал деньги с битов
+                                и отнимал статуэтки «Грэмми».
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Навыки -->
+                <section class="skills">
+                    <h2 class="skills__title">Мои навыки</h2>
+                    <div class="skills__list">
+                        <div class="skill skill--html">
+                            <span class="skill__name">HTML</span>
+                        </div>
+                        <div class="skill skill--css">
+                            <span class="skill__name">CSS</span>
+                        </div>
+                        <div class="skill skill--js">
+                            <span class="skill__name">JavaScript</span>
+                        </div>
+                        <div class="skill skill--design">
+                            <span class="skill__name">Design</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Проекты -->
+                <section class="projects">
+                    <h2 class="projects__title">Проекты</h2>
+                    <div class="projects__grid">
+                        <div class="project-card">
+                            <h3 class="project-card__title">Дизайн макеты</h3>
+                            <p class="project-card__desc">Создание макетов сайтов и приложений</p>
+                        </div>
+                        <div class="project-card">
+                            <h3 class="project-card__title">Разработка</h3>
+                            <p class="project-card__desc">Написание кода и исправление ошибок</p>
+                        </div>
+                        <div class="project-card">
+                            <h3 class="project-card__title">Музыка</h3>
+                            <p class="project-card__desc">Создание битов и выступления</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Подвал -->
+        <footer class="page__footer">
+            <div class="container">
+                <p>&copy; 2025 Моё портфолио</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Переключение темы
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('themeToggle');
+            const body = document.body;
+            
+            // Проверяем сохраненную тему
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            setTheme(savedTheme);
+            
+            themeToggle.addEventListener('click', function() {
+                const currentTheme = body.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                setTheme(newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+            
+            function setTheme(theme) {
+                body.setAttribute('data-theme', theme);
+                
+                if (theme === 'dark') {
+                    themeToggle.textContent = '☀️';
+                } else {
+                    themeToggle.textContent = '🌙';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
