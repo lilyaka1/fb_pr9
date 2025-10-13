@@ -5,55 +5,55 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectCards = document.querySelectorAll('.project-card');
     const closeBtn = document.querySelector('.close');
 
-    // Данные проектов (в реальном проекте это будет из базы данных)
+    // Данные проектов с реальными ссылками на GitHub
     const projectsData = {
         '1': {
-            title: 'Личный сайт',
-            image: '../images/kanye-meme-1.jpeg',
-            description: 'Портфолио с современным дизайном, созданное с использованием HTML и CSS. Включает адаптивную верстку и плавные анимации.',
-            tags: ['HTML', 'CSS'],
-            liveUrl: '#',
-            codeUrl: '#'
+            title: 'Film Recommendation System',
+            image: '../images/IMG_9215.JPG',
+            description: 'Умная система рекомендаций фильмов на основе машинного обучения. Анализирует предпочтения пользователя и предлагает персонализированные рекомендации.',
+            tags: ['Python', 'ML', 'Pandas', 'Scikit-learn'],
+            liveUrl: 'https://github.com/lilyaka1/Film-recommendation-system',
+            codeUrl: 'https://github.com/lilyaka1/Film-recommendation-system'
         },
         '2': {
-            title: 'Todo-приложение',
-            image: '../images/kanye-meme-2.jpg',
-            description: 'Интерактивное приложение для управления задачами с возможностью добавления, удаления и отметки выполненных задач. Данные хранятся в localStorage.',
-            tags: ['JavaScript', 'LocalStorage'],
-            liveUrl: '#',
-            codeUrl: '#'
+            title: 'ChatGPT Telegram Bot',
+            image: '../images/IMG_6799.PNG',
+            description: 'Телеграм бот с интеграцией OpenAI ChatGPT API. Позволяет общаться с нейросетью прямо в мессенджере.',
+            tags: ['Python', 'AI', 'Telegram API', 'OpenAI'],
+            liveUrl: 'https://github.com/lilyaka1',
+            codeUrl: 'https://github.com/lilyaka1'
         },
         '3': {
-            title: 'Интернет-магазин',
-            image: '../images/kanye-meme-3.jpg',
-            description: 'E-commerce приложение на React с корзиной покупок, фильтрацией товаров и оформлением заказа.',
-            tags: ['React', 'Redux'],
-            liveUrl: '#',
-            codeUrl: '#'
+            title: 'Учебные проекты',
+            image: '../images/IMG_0751.JPG',
+            description: 'Коллекция учебных проектов по фронтенд и бэкенд разработке. Включает контрольные работы и практические задания.',
+            tags: ['HTML/CSS', 'JavaScript', 'Bootstrap', 'БЭМ'],
+            liveUrl: 'https://lilyaka1.github.io/',
+            codeUrl: 'https://github.com/lilyaka1'
         },
         '4': {
-            title: 'Bootstrap портфолио',
-            image: '../images/kanye-meme-4.jpeg',
-            description: 'Адаптивный сайт-портфолио, созданный с использованием фреймворка Bootstrap. Полностью отзывчивый дизайн.',
-            tags: ['HTML', 'Bootstrap'],
-            liveUrl: '#',
-            codeUrl: '#'
+            title: 'Портфолио БЭМ',
+            image: '../images/IMG_9242.jpeg',
+            description: 'Сайт-портфолио разработанный с использованием методологии БЭМ. Демонстрирует навыки организации кода и структурирования стилей.',
+            tags: ['HTML', 'CSS', 'БЭМ'],
+            liveUrl: 'https://lilyaka1.github.io/fb_pr9/index_v1.html',
+            codeUrl: 'https://github.com/lilyaka1/fb_pr9'
         },
         '5': {
-            title: 'Калькулятор',
-            image: '../images/kanye-meme-5.jpeg',
-            description: 'Простой калькулятор на чистом JavaScript с поддержкой базовых арифметических операций.',
-            tags: ['JavaScript'],
-            liveUrl: '#',
-            codeUrl: '#'
+            title: 'Bootstrap Portfolio',
+            image: '../images/IMG_0001.PNG',
+            description: 'Адаптивное портфолио созданное на Bootstrap 5. Включает современные компоненты и отзывчивый дизайн.',
+            tags: ['Bootstrap', 'HTML', 'JavaScript'],
+            liveUrl: 'https://lilyaka1.github.io/fb_pr9/pages/index_v2.html',
+            codeUrl: 'https://github.com/lilyaka1/fb_pr9'
         },
         '6': {
-            title: 'Погодное приложение',
-            image: '../images/kanye-meme-6.jpg',
-            description: 'Приложение для просмотра погоды с использованием API OpenWeatherMap. Показывает текущую погоду и прогноз на неделю.',
-            tags: ['React', 'API'],
-            liveUrl: '#',
-            codeUrl: '#'
+            title: 'Практика 13',
+            image: '../images/memee.jpg',
+            description: 'Современное портфолио с темной темой и дизайном вдохновленным альбомом MBDTF. Включает переключатель темы и интерактивные элементы.',
+            tags: ['HTML/CSS', 'JavaScript', 'Dark Theme'],
+            liveUrl: 'https://lilyaka1.github.io/fb_pr9/',
+            codeUrl: 'https://github.com/lilyaka1/fb_pr9'
         }
     };
 
@@ -78,6 +78,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     tagSpan.textContent = tag;
                     tagsContainer.appendChild(tagSpan);
                 });
+
+                // Устанавливаем ссылки
+                const liveLink = document.getElementById('modalLiveLink');
+                const githubLink = document.getElementById('modalGithubLink');
+                if (liveLink) liveLink.href = project.liveUrl;
+                if (githubLink) githubLink.href = project.codeUrl;
 
                 // Показываем модальное окно
                 modal.style.display = 'block';

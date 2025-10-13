@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Проекты - Портфолио студента</title>
+    <link rel="icon" type="image/jpeg" href="../images/ico.jpg">
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
@@ -23,6 +24,13 @@
                         <li><a href="contacts.html" class="nav-link">Контакты</a></li>
                     </ul>
                 </nav>
+                                    </ul>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                        <span class="theme-icon">
+                            <img src="../images/light.jpg" alt="Переключить тему" id="themeImage">
+                        </span>
+                    </button>
+                </nav>
             </div>
         </div>
     </header>
@@ -37,78 +45,88 @@
                 <!-- Фильтры -->
                 <div class="filters">
                     <button class="filter-btn active" data-filter="all">Все</button>
-                    <button class="filter-btn" data-filter="html">HTML/CSS</button>
-                    <button class="filter-btn" data-filter="js">JavaScript</button>
-                    <button class="filter-btn" data-filter="react">React</button>
+                    <button class="filter-btn" data-filter="html">Фронтенд</button>
+                    <button class="filter-btn" data-filter="js">Python/AI</button>
+                    <button class="filter-btn" data-filter="react">Учебные</button>
                 </div>
 
                 <!-- Сетка проектов -->
                 <div class="projects-grid">
-                    <div class="project-card" data-category="html" data-id="1">
-                        <img src="../images/kanye-meme-1.jpeg" alt="Личный сайт" class="project-image">
+                    <div class="project-card" data-category="js" data-id="1">
+                        <img src="../images/IMG_9215.JPG" alt="Film Recommendation System" class="project-image">
                         <div class="project-content">
-                            <h3>Личный сайт</h3>
-                            <p>Портфолио с современным дизайном</p>
+                            <h3>Film Recommendation System</h3>
+                            <p>Умная система рекомендаций фильмов с ML алгоритмами</p>
                             <div class="project-tags">
-                                <span class="tag">HTML</span>
-                                <span class="tag">CSS</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card" data-category="js" data-id="2">
-                        <img src="../images/kanye-meme-2.jpg" alt="Todo-приложение" class="project-image">
-                        <div class="project-content">
-                            <h3>Todo-приложение</h3>
-                            <p>Управление задачами с локальным хранилищем</p>
-                            <div class="project-tags">
-                                <span class="tag">JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card" data-category="react" data-id="3">
-                        <img src="../images/kanye-meme-3.jpg" alt="Интернет-магазин" class="project-image">
-                        <div class="project-content">
-                            <h3>Интернет-магазин</h3>
-                            <p>E-commerce приложение с корзиной</p>
-                            <div class="project-tags">
-                                <span class="tag">React</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">ML</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="project-card" data-category="html" data-id="4">
-                        <img src="../images/kanye-meme-4.jpeg" alt="Bootstrap портфолио" class="project-image">
+                        <img src="../images/IMG_9242.jpeg" alt="БЭМ методология" class="project-image">
                         <div class="project-content">
-                            <h3>Bootstrap портфолио</h3>
-                            <p>Адаптивный сайт на Bootstrap</p>
+                            <h3>Портфолио БЭМ</h3>
+                            <p>Сайт-портфолио с использованием БЭМ методологии</p>
                             <div class="project-tags">
                                 <span class="tag">HTML</span>
-                                <span class="tag">Bootstrap</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">БЭМ</span>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="project-card" data-category="js" data-id="5">
-                        <img src="../images/kanye-meme-5.jpeg" alt="Калькулятор" class="project-image">
+                    <div class="project-card" data-category="react" data-id="3">
+                        <img src="../images/IMG_0751.JPG" alt="Web Portfolio" class="project-image">
                         <div class="project-content">
-                            <h3>Калькулятор</h3>
-                            <p>Простой калькулятор на JavaScript</p>
+                            <h3>Учебные проекты</h3>
+                            <p>Фронтенд и бэкенд разработка, контрольные работы</p>
                             <div class="project-tags">
+                                <span class="tag">HTML/CSS</span>
                                 <span class="tag">JavaScript</span>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="project-card" data-category="react" data-id="6">
-                        <img src="../images/kanye-meme-6.jpg" alt="Погодное приложение" class="project-image">
+                    <div class="project-card" data-category="js" data-id="2">
+                        <div class="project-image-wrapper">
+                            <img src="../images/IMG_6799.PNG" alt="ChatGPT Telegram Bot" class="project-image">
+                            <div class="project-image-overlay">ChatGPT Bot</div>
+                        </div>
                         <div class="project-content">
-                            <h3>Погодное приложение</h3>
-                            <p>Приложение с API погоды</p>
+                            <h3>ChatGPT Telegram Bot</h3>
+                            <p>Телеграм бот с интеграцией OpenAI ChatGPT API</p>
                             <div class="project-tags">
-                                <span class="tag">React</span>
-                                <span class="tag">API</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">AI</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="html" data-id="5">
+                        <img src="../images/IMG_0001.PNG" alt="Bootstrap сайт" class="project-image">
+                        <div class="project-content">
+                            <h3>Bootstrap Portfolio</h3>
+                            <p>Адаптивное портфолио на Bootstrap 5</p>
+                            <div class="project-tags">
+                                <span class="tag">Bootstrap</span>
+                                <span class="tag">HTML</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="react" data-id="6">
+                        <div class="project-image-wrapper">
+                            <img src="../images/memee.jpg" alt="Практика МТУСИ" class="project-image">
+                            <div class="project-image-overlay">Практика 13</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Практика 13</h3>
+                            <p>Современное портфолио с темной темой и MBDTF дизайном</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML/CSS</span>
+                                <span class="tag">JavaScript</span>
                             </div>
                         </div>
                     </div>
@@ -126,8 +144,8 @@
             <p id="modalDescription">Описание проекта</p>
             <div id="modalTags" class="project-tags"></div>
             <div class="modal-links">
-                <a href="#" class="btn btn-primary">Посмотреть живую версию</a>
-                <a href="#" class="btn btn-secondary">Исходный код</a>
+                <a href="#" id="modalLiveLink" class="btn btn-primary" target="_blank">Посмотреть живую версию</a>
+                <a href="#" id="modalGithubLink" class="btn btn-secondary" target="_blank">Исходный код на GitHub</a>
             </div>
         </div>
     </div>
@@ -139,6 +157,30 @@
         </div>
     </footer>
 
+    <script>
+        // Темная тема
+        const themeToggle = document.getElementById('themeToggle');
+        const themeImage = document.getElementById('themeImage');
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        themeImage.src = savedTheme === 'dark' ? '../images/dark.jpeg' : '../images/light.jpg';
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            // Анимация движения в сторону
+            themeToggle.style.transform = 'translateX(-10px) scale(0.9)';
+            setTimeout(() => {
+                themeToggle.style.transform = '';
+            }, 200);
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeImage.src = newTheme === 'dark' ? '../images/dark.jpeg' : '../images/light.jpg';
+        });
+    </script>
     <script src="../scripts/filters.js"></script>
     <script src="../scripts/modal.js"></script>
 </body>

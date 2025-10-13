@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты - Портфолио студента</title>
+    <link rel="icon" type="image/jpeg" href="../images/ico.jpg">
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
@@ -22,6 +23,11 @@
                         <li><a href="diary.html" class="nav-link">Дневник</a></li>
                         <li><a href="contacts.html" class="nav-link active">Контакты</a></li>
                     </ul>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                        <span class="theme-icon">
+                            <img src="../images/light.jpg" alt="Переключить тему" id="themeImage">
+                        </span>
+                    </button>
                 </nav>
             </div>
         </div>
@@ -65,7 +71,7 @@
                                 <img src="../images/icons/email.svg" alt="Email" class="contact-icon">
                                 <div class="contact-details">
                                     <span class="contact-label">Email</span>
-                                    <a href="mailto:student@edu.ru">student@edu.ru</a>
+                                    <a href="mailto:ye@ye.ye">ye@ye.ye</a>
                                 </div>
                             </div>
 
@@ -98,228 +104,30 @@
         </div>
     </footer>
 
-    <script src="../scripts/form-validation.js"></script>
-</body>
-</html>
-                    </div>
-                </div>
-
-                <!-- Working Hours -->
-                <div class="col-md-6">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="bi bi-clock-fill text-warning fs-1 mb-3"></i>
-                            <h5 class="card-title">Время работы</h5>
-                            <p class="card-text">Пн-Пт: 9:00-18:00<br>Сб-Вс: выходной</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Social Media -->
-            <div class="row mb-5">
-                <div class="col-12">
-                    <div class="card shadow-sm">
-                        <div class="card-header bg-light">
-                            <h5 class="card-title mb-0">
-                                <i class="bi bi-share text-primary"></i>
-                                Социальные сети
-                            </h5>
-                        </div>
-                        <div class="card-body">
-                            <div class="d-flex justify-content-center gap-3 flex-wrap">
-                                <a href="#" class="btn btn-outline-primary">
-                                    <i class="bi bi-telegram"></i> Telegram
-                                </a>
-                                <a href="#" class="btn btn-outline-info">
-                                    <i class="bi bi-vk"></i> VKontakte
-                                </a>
-                                <a href="#" class="btn btn-outline-success">
-                                    <i class="bi bi-whatsapp"></i> WhatsApp
-                                </a>
-                                <a href="#" class="btn btn-outline-dark">
-                                    <i class="bi bi-github"></i> GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Contact Form -->
-            <div class="row">
-                <div class="col-12">
-                    <div class="card shadow-sm">
-                        <div class="card-header bg-primary text-white">
-                            <h5 class="card-title mb-0">
-                                <i class="bi bi-envelope-paper"></i>
-                                Форма обратной связи
-                            </h5>
-                        </div>
-                        <div class="card-body">
-                            <form id="contactForm">
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <label for="name" class="form-label">
-                                            Имя <span class="text-danger">*</span>
-                                        </label>
-                                        <input type="text" class="form-control" id="name" name="name" required placeholder="Введите ваше имя">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="phone" class="form-label">
-                                            Телефон <span class="text-danger">*</span>
-                                        </label>
-                                        <input type="tel" class="form-control" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="email" class="form-label">
-                                            Email <span class="text-danger">*</span>
-                                        </label>
-                                        <input type="email" class="form-control" id="email" name="email" required placeholder="example@mail.ru">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="category" class="form-label">
-                                            Категория обращения <span class="text-danger">*</span>
-                                        </label>
-                                        <select class="form-select" id="category" name="category" required>
-                                            <option value="">Выберите категорию</option>
-                                            <option value="technical">Техническая поддержка</option>
-                                            <option value="commercial">Коммерческое предложение</option>
-                                            <option value="cooperation">Сотрудничество</option>
-                                            <option value="complaint">Жалоба</option>
-                                            <option value="suggestion">Предложение</option>
-                                            <option value="other">Другое</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="message" class="form-label">
-                                            Сообщение <span class="text-danger">*</span>
-                                        </label>
-                                        <textarea class="form-control" id="message" name="message" rows="4" required placeholder="Опишите вашу проблему или вопрос..."></textarea>
-                                    </div>
-                                    <div class="col-12">
-                                        <button type="submit" class="btn btn-primary">
-                                            <i class="bi bi-send"></i> Отправить сообщение
-                                        </button>
-                                        <button type="reset" class="btn btn-secondary ms-2">
-                                            <i class="bi bi-arrow-clockwise"></i> Очистить
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <!-- Footer -->
-        <footer class="bg-dark text-white py-4 mt-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <p class="mb-0">&copy; 2025 Контактная информация. Все права защищены.</p>
-                    </div>
-                    <div class="col-md-6 text-md-end">
-                        <a href="../index.html" class="text-white text-decoration-none me-3">Главная</a>
-                        <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-
-    <!-- Success Modal -->
-    <div class="modal fade" id="successModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-success text-white">
-                    <h5 class="modal-title">
-                        <i class="bi bi-check-circle-fill"></i>
-                        Сообщение отправлено
-                    </h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <p class="mb-0">Спасибо! Ваше обращение отправлено. Мы свяжемся с вами в ближайшее время.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Понятно</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Переключение темы
-        document.addEventListener('DOMContentLoaded', function() {
-            const themeToggle = document.getElementById('themeToggle');
-            const themeIcon = document.getElementById('themeIcon');
-            const themeText = document.getElementById('themeText');
-            const body = document.body;
+        // Темная тема
+        const themeToggle = document.getElementById('themeToggle');
+        const themeImage = document.getElementById('themeImage');
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        themeImage.src = savedTheme === 'dark' ? '../images/dark.jpeg' : '../images/light.jpg';
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             
-            // Проверяем сохраненную тему
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            setTheme(savedTheme);
+            // Анимация движения в сторону
+            themeToggle.style.transform = 'translateX(-10px) scale(0.9)';
+            setTimeout(() => {
+                themeToggle.style.transform = '';
+            }, 200);
             
-            themeToggle.addEventListener('click', function() {
-                const currentTheme = body.getAttribute('data-bs-theme');
-                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                setTheme(newTheme);
-                localStorage.setItem('theme', newTheme);
-            });
-            
-            function setTheme(theme) {
-                body.setAttribute('data-bs-theme', theme);
-                
-                if (theme === 'dark') {
-                    themeIcon.className = 'bi bi-sun-fill';
-                    themeText.textContent = 'Светлая тема';
-                    body.className = '';
-                    
-                    // Обновляем элементы для темной темы
-                    const container = document.querySelector('.container-fluid');
-                    if (container) container.style.backgroundColor = 'var(--bs-dark)';
-                } else {
-                    themeIcon.className = 'bi bi-moon-fill';
-                    themeText.textContent = 'Темная тема';
-                    body.className = '';
-                    
-                    // Сброс стилей для светлой темы
-                    const container = document.querySelector('.container-fluid');
-                    if (container) container.style.backgroundColor = '';
-                }
-            }
-
-            // Обработка формы
-            const contactForm = document.getElementById('contactForm');
-            const successModal = new bootstrap.Modal(document.getElementById('successModal'));
-
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Простая валидация
-                if (!contactForm.checkValidity()) {
-                    contactForm.classList.add('was-validated');
-                    return;
-                }
-
-                // Собираем данные формы
-                const formData = new FormData(contactForm);
-                const data = Object.fromEntries(formData);
-
-                // В реальном приложении здесь был бы AJAX-запрос
-                console.log('Данные формы:', data);
-                
-                // Показываем модальное окно успеха
-                successModal.show();
-                
-                // Очищаем форму
-                contactForm.reset();
-                contactForm.classList.remove('was-validated');
-            });
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeImage.src = newTheme === 'dark' ? '../images/dark.jpeg' : '../images/light.jpg';
         });
     </script>
+    <script src="../scripts/form-validation.js"></script>
 </body>
 </html>

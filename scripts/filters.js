@@ -20,10 +20,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 if (filter === 'all' || category === filter) {
                     card.style.display = 'block';
-                    // Анимация появления
-                    card.style.animation = 'fadeIn 0.5s';
+                    card.style.opacity = '1';
+                    card.style.animation = 'none';
+                    // Перезапускаем анимацию
+                    setTimeout(() => {
+                        card.style.animation = 'fadeInUp 0.5s ease forwards';
+                    }, 10);
                 } else {
                     card.style.display = 'none';
+                    card.style.opacity = '0';
                 }
             });
         });
