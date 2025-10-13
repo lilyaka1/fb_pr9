@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты - Портфолио студента</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Сало Вячеслав</h1>
+                    <p class="subtitle">Студент-разработчик</p>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Главная</a></li>
+                        <li><a href="projects.html" class="nav-link active">Проекты</a></li>
+                        <li><a href="diary.html" class="nav-link">Дневник</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Секция проектов -->
+        <section class="projects-page">
+            <div class="container">
+                <h2 class="section-title">Мои проекты</h2>
+                
+                <!-- Фильтры -->
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="html">HTML/CSS</button>
+                    <button class="filter-btn" data-filter="js">JavaScript</button>
+                    <button class="filter-btn" data-filter="react">React</button>
+                </div>
+
+                <!-- Сетка проектов -->
+                <div class="projects-grid">
+                    <div class="project-card" data-category="html" data-id="1">
+                        <img src="../images/kanye-meme-1.jpeg" alt="Личный сайт" class="project-image">
+                        <div class="project-content">
+                            <h3>Личный сайт</h3>
+                            <p>Портфолио с современным дизайном</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="js" data-id="2">
+                        <img src="../images/kanye-meme-2.jpg" alt="Todo-приложение" class="project-image">
+                        <div class="project-content">
+                            <h3>Todo-приложение</h3>
+                            <p>Управление задачами с локальным хранилищем</p>
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="react" data-id="3">
+                        <img src="../images/kanye-meme-3.jpg" alt="Интернет-магазин" class="project-image">
+                        <div class="project-content">
+                            <h3>Интернет-магазин</h3>
+                            <p>E-commerce приложение с корзиной</p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="html" data-id="4">
+                        <img src="../images/kanye-meme-4.jpeg" alt="Bootstrap портфолио" class="project-image">
+                        <div class="project-content">
+                            <h3>Bootstrap портфолио</h3>
+                            <p>Адаптивный сайт на Bootstrap</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="js" data-id="5">
+                        <img src="../images/kanye-meme-5.jpeg" alt="Калькулятор" class="project-image">
+                        <div class="project-content">
+                            <h3>Калькулятор</h3>
+                            <p>Простой калькулятор на JavaScript</p>
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="react" data-id="6">
+                        <img src="../images/kanye-meme-6.jpg" alt="Погодное приложение" class="project-image">
+                        <div class="project-content">
+                            <h3>Погодное приложение</h3>
+                            <p>Приложение с API погоды</p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Модальное окно для деталей проекта -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Название проекта</h2>
+            <img id="modalImage" src="" alt="" class="modal-image">
+            <p id="modalDescription">Описание проекта</p>
+            <div id="modalTags" class="project-tags"></div>
+            <div class="modal-links">
+                <a href="#" class="btn btn-primary">Посмотреть живую версию</a>
+                <a href="#" class="btn btn-secondary">Исходный код</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Портфолио студента. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/filters.js"></script>
+    <script src="../scripts/modal.js"></script>
+</body>
+</html>

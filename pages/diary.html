@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебный дневник - Портфолио студента</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Сало Вячеслав</h1>
+                    <p class="subtitle">Студент-разработчик</p>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Главная</a></li>
+                        <li><a href="projects.html" class="nav-link">Проекты</a></li>
+                        <li><a href="diary.html" class="nav-link active">Дневник</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Секция учебного прогресса -->
+        <section class="diary-page">
+            <div class="container">
+                <h2 class="section-title">Мой учебный прогресс</h2>
+                
+                <!-- Записи дневника -->
+                <div class="diary-entries">
+                    <div class="diary-entry">
+                        <div class="entry-date">15 декабря 2024</div>
+                        <h3 class="entry-title">Верстка макета сайта</h3>
+                        <p class="entry-description">
+                            Изучил принципы адаптивной верстки и создал свой первый макет сайта. 
+                            Использовал Flexbox и Grid для создания современного дизайна.
+                        </p>
+                        <span class="entry-status status-completed">✓ Выполнено</span>
+                    </div>
+
+                    <div class="diary-entry">
+                        <div class="entry-date">10 декабря 2024</div>
+                        <h3 class="entry-title">JavaScript основы</h3>
+                        <p class="entry-description">
+                            Прошел курс по основам JavaScript: переменные, функции, циклы и массивы. 
+                            Создал несколько простых программ для закрепления материала.
+                        </p>
+                        <span class="entry-status status-completed">✓ Выполнено</span>
+                    </div>
+
+                    <div class="diary-entry">
+                        <div class="entry-date">5 декабря 2024</div>
+                        <h3 class="entry-title">Работа с формами</h3>
+                        <p class="entry-description">
+                            Изучаю валидацию форм и обработку данных. Создал контактную форму 
+                            с проверкой введенных данных.
+                        </p>
+                        <span class="entry-status status-progress">⏳ В процессе</span>
+                    </div>
+
+                    <div class="diary-entry">
+                        <div class="entry-date">1 декабря 2024</div>
+                        <h3 class="entry-title">Адаптивный дизайн</h3>
+                        <p class="entry-description">
+                            Начал изучение адаптивного дизайна и медиа-запросов. 
+                            Планирую адаптировать все свои проекты под мобильные устройства.
+                        </p>
+                        <span class="entry-status status-progress">⏳ В процессе</span>
+                    </div>
+                </div>
+
+                <!-- Текущие курсы -->
+                <div class="current-courses">
+                    <h2 class="section-title">Текущие курсы</h2>
+                    <div class="courses-grid">
+                        <div class="course-item">
+                            <div class="course-header">
+                                <span class="course-name">Веб-разработка</span>
+                                <span class="course-percent">90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="course-item">
+                            <div class="course-header">
+                                <span class="course-name">JavaScript</span>
+                                <span class="course-percent">70%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+
+                        <div class="course-item">
+                            <div class="course-header">
+                                <span class="course-name">React</span>
+                                <span class="course-percent">50%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Форма добавления записи -->
+                <div class="add-entry-section">
+                    <h2 class="section-title">Добавить запись</h2>
+                    <form class="entry-form" id="entryForm">
+                        <div class="form-group">
+                            <label for="entryTitle">Название темы</label>
+                            <input type="text" id="entryTitle" name="title" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="entryDescription">Описание</label>
+                            <textarea id="entryDescription" name="description" rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="entryStatus">Статус</label>
+                            <select id="entryStatus" name="status">
+                                <option value="progress">В процессе</option>
+                                <option value="completed">Выполнено</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Добавить запись</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Портфолио студента. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Простая обработка формы (будет расширена в будущих занятиях)
+        document.getElementById('entryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Запись добавлена! (Функция будет реализована в следующих практиках)');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
