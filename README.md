@@ -12,4 +12,4 @@
 
 ## Ссылки
 
-- [Главная страница (выбор версии) GitHub Pages](https://lilyaka1.github.io/fb_pr9/)
+- [Главная страница (выбор версии) GitHub Pages](https://lilyaka1.github.io/frontend-backend/)
