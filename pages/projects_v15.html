@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты - Практика 15</title>
+    <link rel="icon" type="image/jpeg" href="../images/ico.jpg">
+    <link rel="stylesheet" href="../styles/styles_v15.css">
+</head>
+<body>
+    <div class="page">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header__content">
+                    <h1 class="header__title">Сало Вячеслав</h1>
+                    <p class="header__subtitle">Студент-разработчик</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="../index_v15.html" class="nav__link">Главная</a>
+                    </li>
+                    <li class="nav__item nav__item--active">
+                        <a href="projects_v15.html" class="nav__link">Проекты</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="diary_v15.html" class="nav__link">Дневник</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contacts_v15.html" class="nav__link">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="container">
+                <!-- Projects Section -->
+                <section class="projects">
+                    <div class="projects__header">
+                        <h2 class="section-title">Мои проекты</h2>
+                        <div class="projects__filters">
+                            <button class="filter filter--active" data-filter="all">Все</button>
+                            <button class="filter" data-filter="python">Python/AI</button>
+                            <button class="filter" data-filter="frontend">Фронтенд</button>
+                            <button class="filter" data-filter="educational">Учебные</button>
+                        </div>
+                    </div>
+
+                    <div class="projects__grid">
+                        <!-- Проект 1: Film Recommendation -->
+                        <article class="project-card" data-category="python">
+                            <div class="project-card__image">
+                                <img src="../images/IMG_9215.JPG" alt="Film Recommendation System">
+                            </div>
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">Film Recommendation System</h3>
+                                <p class="project-card__description">
+                                    Умная система рекомендаций фильмов с использованием алгоритмов машинного обучения
+                                </p>
+                                <div class="project-card__tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">ML</span>
+                                    <span class="tag">Data Science</span>
+                                </div>
+                                <button class="button button--outline project-card__button">Подробнее</button>
+                            </div>
+                        </article>
+
+                        <!-- Проект 2: БЭМ Portfolio -->
+                        <article class="project-card" data-category="frontend">
+                            <div class="project-card__image">
+                                <img src="../images/IMG_9242.jpeg" alt="БЭМ Portfolio">
+                            </div>
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">Портфолио БЭМ</h3>
+                                <p class="project-card__description">
+                                    Сайт-портфолио с использованием методологии БЭМ для структурирования CSS
+                                </p>
+                                <div class="project-card__tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">БЭМ</span>
+                                </div>
+                                <button class="button button--outline project-card__button">Подробнее</button>
+                            </div>
+                        </article>
+
+                        <!-- Проект 3: Учебные проекты -->
+                        <article class="project-card" data-category="educational">
+                            <div class="project-card__image">
+                                <img src="../images/IMG_0751.JPG" alt="Учебные проекты">
+                            </div>
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">Учебные проекты</h3>
+                                <p class="project-card__description">
+                                    Коллекция учебных проектов по фронтенд и бэкенд разработке
+                                </p>
+                                <div class="project-card__tags">
+                                    <span class="tag">HTML/CSS</span>
+                                    <span class="tag">JavaScript</span>
+                                </div>
+                                <button class="button button--outline project-card__button">Подробнее</button>
+                            </div>
+                        </article>
+
+                        <!-- Проект 4: ChatGPT Bot -->
+                        <article class="project-card" data-category="python">
+                            <div class="project-card__image">
+                                <img src="../images/IMG_6799.PNG" alt="ChatGPT Telegram Bot">
+                            </div>
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">ChatGPT Telegram Bot</h3>
+                                <p class="project-card__description">
+                                    Телеграм бот с интеграцией OpenAI ChatGPT API для общения с пользователями
+                                </p>
+                                <div class="project-card__tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">AI</span>
+                                    <span class="tag">Telegram API</span>
+                                </div>
+                                <button class="button button--outline project-card__button">Подробнее</button>
+                            </div>
+                        </article>
+
+                        <!-- Проект 5: Bootstrap Portfolio -->
+                        <article class="project-card" data-category="frontend">
+                            <div class="project-card__image">
+                                <img src="../images/IMG_0001.PNG" alt="Bootstrap Portfolio">
+                            </div>
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">Bootstrap Portfolio</h3>
+                                <p class="project-card__description">
+                                    Адаптивное портфолио, созданное с использованием Bootstrap 5
+                                </p>
+                                <div class="project-card__tags">
+                                    <span class="tag">Bootstrap</span>
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                </div>
+                                <button class="button button--outline project-card__button">Подробнее</button>
+                            </div>
+                        </article>
+
+                        <!-- Проект 6: Практика 13 -->
+                        <article class="project-card" data-category="educational">
+                            <div class="project-card__image">
+                                <img src="../images/memee.jpg" alt="Практика 13">
+                            </div>
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">Практика 13</h3>
+                                <p class="project-card__description">
+                                    Портфолио с темой MBDTF - My Beautiful Dark Twisted Fantasy
+                                </p>
+                                <div class="project-card__tags">
+                                    <span class="tag">HTML/CSS</span>
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">Dark Mode</span>
+                                </div>
+                                <button class="button button--outline project-card__button">Подробнее</button>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__content">
+                    <p class="footer__copyright">&copy; 2025 Практика 15 - Проекты</p>
+                    <div class="footer__links">
+                        <a href="mailto:student@edu.ru" class="footer__link">student@edu.ru</a>
+                        <a href="https://github.com/lilyaka1" class="footer__link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../scripts/filters.js"></script>
+    <script>
+        // Простая фильтрация проектов
+        const filters = document.querySelectorAll('.filter');
+        const projects = document.querySelectorAll('.project-card');
+
+        filters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                const filterValue = filter.dataset.filter;
+
+                // Обновляем активный фильтр
+                filters.forEach(f => f.classList.remove('filter--active'));
+                filter.classList.add('filter--active');
+
+                // Фильтруем проекты
+                projects.forEach(project => {
+                    if (filterValue === 'all' || project.dataset.category === filterValue) {
+                        project.style.display = 'flex';
+                    } else {
+                        project.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

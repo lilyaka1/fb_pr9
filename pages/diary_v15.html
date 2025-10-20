@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дневник - Практика 15</title>
+    <link rel="icon" type="image/jpeg" href="../images/ico.jpg">
+    <link rel="stylesheet" href="../styles/styles_v15.css">
+</head>
+<body>
+    <div class="page">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header__content">
+                    <h1 class="header__title">Сало Вячеслав</h1>
+                    <p class="header__subtitle">Студент-разработчик</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="../index_v15.html" class="nav__link">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="projects_v15.html" class="nav__link">Проекты</a>
+                    </li>
+                    <li class="nav__item nav__item--active">
+                        <a href="diary_v15.html" class="nav__link">Дневник</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contacts_v15.html" class="nav__link">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="container">
+                <!-- Diary Section -->
+                <section class="diary">
+                    <h2 class="section-title">Дневник обучения</h2>
+
+                    <!-- Timeline -->
+                    <div class="timeline">
+                        <!-- Запись 1 -->
+                        <div class="timeline__item">
+                            <div class="timeline__date">20.10.2025</div>
+                            <div class="timeline__content">
+                                <h3 class="timeline__title">Практика 15: Адаптивная вёрстка</h3>
+                                <p class="timeline__description">
+                                    Начал работу над практикой 15. Изучил комбинирование методов адаптивной вёрстки:
+                                    Grid, Flexbox, media queries. Реализовал БЭМ-методологию для именования классов.
+                                </p>
+                                <span class="timeline__status timeline__status--in-progress">В процессе</span>
+                            </div>
+                        </div>
+
+                        <!-- Запись 2 -->
+                        <div class="timeline__item">
+                            <div class="timeline__date">13.10.2025</div>
+                            <div class="timeline__content">
+                                <h3 class="timeline__title">Практика 13: MBDTF Theme</h3>
+                                <p class="timeline__description">
+                                    Завершена работа над практикой 13. Реализована тема My Beautiful Dark Twisted Fantasy
+                                    с градиентами, темной темой и адаптивным дизайном. Добавлены анимации и эффекты.
+                                </p>
+                                <span class="timeline__status timeline__status--completed">Завершено</span>
+                            </div>
+                        </div>
+
+                        <!-- Запись 3 -->
+                        <div class="timeline__item">
+                            <div class="timeline__date">06.10.2025</div>
+                            <div class="timeline__content">
+                                <h3 class="timeline__title">Практика 12: Bootstrap</h3>
+                                <p class="timeline__description">
+                                    Изучил Bootstrap 5 и создал адаптивное портфолио с использованием компонентов фреймворка.
+                                    Использовал сетку Bootstrap, модальные окна, формы и навигацию.
+                                </p>
+                                <span class="timeline__status timeline__status--completed">Завершено</span>
+                            </div>
+                        </div>
+
+                        <!-- Запись 4 -->
+                        <div class="timeline__item">
+                            <div class="timeline__date">29.09.2025</div>
+                            <div class="timeline__content">
+                                <h3 class="timeline__title">Практика 11: БЭМ методология</h3>
+                                <p class="timeline__description">
+                                    Освоил методологию БЭМ (Блок, Элемент, Модификатор) для структурирования CSS.
+                                    Создал портфолио с чистой и понятной структурой стилей.
+                                </p>
+                                <span class="timeline__status timeline__status--completed">Завершено</span>
+                            </div>
+                        </div>
+
+                        <!-- Запись 5 -->
+                        <div class="timeline__item">
+                            <div class="timeline__date">22.09.2025</div>
+                            <div class="timeline__content">
+                                <h3 class="timeline__title">ChatGPT Telegram Bot</h3>
+                                <p class="timeline__description">
+                                    Разработал телеграм бота с интеграцией OpenAI ChatGPT API. Бот умеет отвечать
+                                    на вопросы пользователей и поддерживать контекст разговора.
+                                </p>
+                                <span class="timeline__status timeline__status--completed">Завершено</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Courses Section -->
+                    <div class="courses">
+                        <h3 class="courses__title">Прогресс по курсам</h3>
+                        <div class="courses__grid">
+                            <!-- Курс 1 -->
+                            <div class="course">
+                                <div class="course__header">
+                                    <span class="course__name">Фронтенд разработка</span>
+                                    <span class="course__percent">85%</span>
+                                </div>
+                                <div class="course__progress">
+                                    <div class="course__progress-bar" style="width: 85%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Курс 2 -->
+                            <div class="course">
+                                <div class="course__header">
+                                    <span class="course__name">JavaScript</span>
+                                    <span class="course__percent">80%</span>
+                                </div>
+                                <div class="course__progress">
+                                    <div class="course__progress-bar" style="width: 80%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Курс 3 -->
+                            <div class="course">
+                                <div class="course__header">
+                                    <span class="course__name">Python и ML</span>
+                                    <span class="course__percent">75%</span>
+                                </div>
+                                <div class="course__progress">
+                                    <div class="course__progress-bar" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add Entry Form -->
+                    <div class="add-entry">
+                        <h3 class="add-entry__title">Добавить запись</h3>
+                        <form class="add-entry__form" id="diaryForm">
+                            <div class="form-group">
+                                <label for="entryDate" class="form-label">Дата</label>
+                                <input type="date" id="entryDate" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="entryTitle" class="form-label">Заголовок</label>
+                                <input type="text" id="entryTitle" class="form-input" placeholder="Название события" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="entryDescription" class="form-label">Описание</label>
+                                <textarea id="entryDescription" class="form-textarea" placeholder="Подробное описание" required></textarea>
+                            </div>
+                            <button type="submit" class="button button--primary">Добавить запись</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__content">
+                    <p class="footer__copyright">&copy; 2025 Практика 15 - Дневник</p>
+                    <div class="footer__links">
+                        <a href="mailto:student@edu.ru" class="footer__link">student@edu.ru</a>
+                        <a href="https://github.com/lilyaka1" class="footer__link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Форма добавления записи
+        const form = document.getElementById('diaryForm');
+        const timeline = document.querySelector('.timeline');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const date = document.getElementById('entryDate').value;
+            const title = document.getElementById('entryTitle').value;
+            const description = document.getElementById('entryDescription').value;
+
+            // Форматируем дату
+            const dateObj = new Date(date);
+            const formattedDate = dateObj.toLocaleDateString('ru-RU');
+
+            // Создаём новую запись
+            const newEntry = document.createElement('div');
+            newEntry.className = 'timeline__item';
+            newEntry.innerHTML = `
+                <div class="timeline__date">${formattedDate}</div>
+                <div class="timeline__content">
+                    <h3 class="timeline__title">${title}</h3>
+                    <p class="timeline__description">${description}</p>
+                    <span class="timeline__status timeline__status--completed">Новая запись</span>
+                </div>
+            `;
+
+            // Добавляем в начало timeline
+            timeline.insertBefore(newEntry, timeline.firstChild);
+
+            // Очищаем форму
+            form.reset();
+
+            // Показываем уведомление
+            alert('Запись успешно добавлена!');
+        });
+    </script>
+</body>
+</html>
