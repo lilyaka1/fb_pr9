@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Практики 1-6 — Путёвки в Венесуэлу</title>
-  <meta name="description" content="Проект для практик 1-6: HTML, CSS, адаптивность, формы, медиа">
+  <title>Главная — Путёвки в Венесуэлу</title>
+  <meta name="description" content="Подберём тур под ваш бюджет и даты. Бесплатная консультация и подбор отелей.">
   <link rel="icon" href="../images/favicon.ico">
   <link rel="stylesheet" href="../styles/practice-1-6/styles_v1-6.css">
+  <script src="../scripts/practice-1-6/main.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -14,70 +15,128 @@
       <a class="brand" href="index_v1-6.html">Путёвки в Венесуэлу</a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
-          <li><a class="site-nav__link" href="../pages/practice-1-6/index.html">Главная</a></li>
+          <li><a class="site-nav__link" href="index_v1-6.html" aria-current="page">Главная</a></li>
           <li><a class="site-nav__link" href="../pages/practice-1-6/about.html">О нас</a></li>
           <li><a class="site-nav__link" href="../pages/practice-1-6/contacts.html">Контакты</a></li>
         </ul>
       </nav>
+      <button id="themeToggle" class="btn theme-toggle" type="button" aria-pressed="false">🌙 Тема</button>
     </div>
   </header>
 
-  <main class="section">
-    <div class="container">
-      <h1>Практики 1-6: Путёвки в Венесуэлу</h1>
-      
-      <p style="color: var(--fg); max-width: 800px;">
-        Этот проект создавался в рамках практик 1-6 и демонстрирует базовые навыки веб-разработки:
-      </p>
-
-      <div class="cards">
-        <article class="card">
-          <h3>🏗️ HTML-структура</h3>
-          <p>Семантические теги, формы, медиа-элементы</p>
-        </article>
-        <article class="card">
-          <h3>🎨 CSS-стили</h3>
-          <p>CSS-переменные, Grid, Flexbox, адаптивность</p>
-        </article>
-        <article class="card">
-          <h3>📱 Адаптивный дизайн</h3>
-          <p>Медиа-запросы, резиновая вёрстка</p>
-        </article>
-        <article class="card">
-          <h3>📝 Формы и валидация</h3>
-          <p>HTML5-валидация, кастомные сообщения</p>
-        </article>
-        <article class="card">
-          <h3>🎬 Медиа-контент</h3>
-          <p>Изображения, видео, адаптивные контейнеры</p>
-        </article>
-        <article class="card">
-          <h3>🌓 Тёмная тема</h3>
-          <p>LocalStorage, CSS-переменные, prefers-color-scheme</p>
-        </article>
-      </div>
-
-      <section style="margin-top: 3rem;">
-        <h2>Навигация по проекту</h2>
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-          <a class="btn btn--primary" href="../pages/practice-1-6/index.html">🏠 Главная страница</a>
-          <a class="btn" href="../pages/practice-1-6/about.html">ℹ️ О нас</a>
-          <a class="btn" href="../pages/practice-1-6/contacts.html">📞 Контакты</a>
+  <main id="main">
+    <!-- HERO -->
+    <section class="section section--tight">
+      <div class="container hero">
+        <div>
+          <span class="hero__kicker">Путешествия мечты</span>
+          <h1>Венесуэла: море, джунгли и новые впечатления</h1>
+          <p>Подберём тур под ваш бюджет и даты. Бесплатная консультация и подбор отелей.</p>
+          <p>
+            <a class="btn btn--primary" href="#services">Посмотреть услуги</a>
+            <button id="openDialog" type="button" class="btn">Написать нам</button>
+          </p>
         </div>
-      </section>
+        <div class="hero__media">
+          <img src="../images/hero.jpg" alt="Главное фото направления">
+        </div>
+      </div>
+    </section>
 
-      <section style="margin-top: 3rem;">
-        <p style="text-align: center;">
-          <a class="btn" href="../index.html">← Вернуться к списку практик</a>
-        </p>
-      </section>
-    </div>
+    <!-- УСЛУГИ -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Наши услуги</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Подбор тура</h3>
+            <p>Соберём маршрут и отели под ваш бюджет и даты.</p>
+          </article>
+          <article class="card">
+            <h3>Визы и страховки</h3>
+            <p>Поможем с оформлением документов без очередей.</p>
+          </article>
+          <article class="card">
+            <h3>Сопровождение</h3>
+            <p>Круглосуточная поддержка во время путешествия.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ГАЛЕРЕЯ -->
+    <section class="section">
+      <div class="container">
+        <h2>Фотографии</h2>
+        <div class="gallery">
+          <figure><img src="../images/gallery-1.jpeg" alt="Фото 1"></figure>
+          <figure><img src="../images/gallery-2.jpg" alt="Фото 2"></figure>
+          <figure><img src="../images/gallery-3.jpeg" alt="Фото 3"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ВИДЕО -->
+    <section class="section section--tight">
+      <div class="container">
+        <h2>Короткое видео о направлении</h2>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/QFcw3QZvDcI"
+                  title="Travel teaser" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section id="contacts" class="section">
+      <div class="container">
+        <h2>Контакты</h2>
+        <p>Телефон: +7 (900) 000-00-00</p>
+        <p><a class="btn" href="contacts.html">Подробнее</a></p>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 Практики 1-6 — Путёвки в Венесуэлу</p>
+      <p>© 2025 Путёвки в Венесуэлу</p>
     </div>
   </footer>
+
+  <!-- МОДАЛКА -->
+  <dialog id="contactDialog" aria-labelledby="dialogTitle">
+    <h2 id="dialogTitle">Обратная связь</h2>
+    <form id="contactForm" method="dialog" novalidate>
+      <label for="name">Имя</label>
+      <input id="name" name="name" type="text" required minlength="2" autocomplete="given-name">
+
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" required autocomplete="email">
+
+      <label for="phone">Телефон</label>
+      <input id="phone" name="phone" type="tel" placeholder="+7 (900) 000-00-00"
+             required pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$">
+      <small>Формат: +7 (900) 000-00-00</small>
+
+      <label for="date">Дата</label>
+      <input id="date" name="date" type="date">
+
+      <label for="topic">Тема</label>
+      <select id="topic" name="topic" required>
+        <option value="">Выберите тему</option>
+        <option>Вопрос</option>
+        <option>Заказ</option>
+      </select>
+
+      <label for="message">Сообщение</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <div class="form-actions">
+        <button type="button" id="closeDialog" class="btn">Закрыть</button>
+        <button type="submit" class="btn btn--primary">Отправить</button>
+      </div>
+    </form>
+  </dialog>
 </body>
 </html>
