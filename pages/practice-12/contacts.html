@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Портфолио студента</title>
+    <link rel="icon" type="image/jpeg" href="../../images/ico.jpg">
+    <link rel="stylesheet" href="../../styles/styles.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Сало Вячеслав</h1>
+                    <p class="subtitle">Студент-разработчик</p>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../../index.html" class="nav-link">Главная</a></li>
+                        <li><a href="projects.html" class="nav-link">Проекты</a></li>
+                        <li><a href="diary.html" class="nav-link">Дневник</a></li>
+                        <li><a href="contacts.html" class="nav-link active">Контакты</a></li>
+                    </ul>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                        <span class="theme-icon">
+                            <img src="../../images/light.jpg" alt="Переключить тему" id="themeImage">
+                        </span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Секция контактов -->
+        <section class="contacts-page">
+            <div class="container">
+                <h2 class="section-title">Свяжитесь со мной</h2>
+                
+                <div class="contacts-content">
+                    <!-- Контактная форма -->
+                    <div class="contact-form-section">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Имя</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Сообщение</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                        </form>
+                    </div>
+
+                    <!-- Контактная информация -->
+                    <div class="contact-info-section">
+                        <h3>Контакты:</h3>
+                        <div class="contact-items">
+                            <div class="contact-item">
+                                <img src="../../images/icons/email.svg" alt="Email" class="contact-icon">
+                                <div class="contact-details">
+                                    <span class="contact-label">Email</span>
+                                    <a href="mailto:ye@ye.ye">ye@ye.ye</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <img src="../../images/icons/github.svg" alt="GitHub" class="contact-icon">
+                                <div class="contact-details">
+                                    <span class="contact-label">GitHub</span>
+                                    <a href="https://github.com/lilyaka1" target="_blank">lilyaka1</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <img src="../../images/icons/location.svg" alt="Location" class="contact-icon">
+                                <div class="contact-details">
+                                    <span class="contact-label">Местоположение</span>
+                                    <span>Москва, Россия</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Портфолио студента. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Темная тема
+        const themeToggle = document.getElementById('themeToggle');
+        const themeImage = document.getElementById('themeImage');
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        themeImage.src = savedTheme === 'dark' ? '../images/dark.jpeg' : '../images/light.jpg';
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            // Анимация движения в сторону
+            themeToggle.style.transform = 'translateX(-10px) scale(0.9)';
+            setTimeout(() => {
+                themeToggle.style.transform = '';
+            }, 200);
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeImage.src = newTheme === 'dark' ? '../images/dark.jpeg' : '../images/light.jpg';
+        });
+    </script>
+    <script src="../../scripts/form-validation.js"></script>
+</body>
+</html>
