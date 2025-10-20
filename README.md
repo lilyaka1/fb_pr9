@@ -9,7 +9,8 @@
 
 ## Ссылки
 
+- [Главная страница (выбор версии) GitHub Pages](https://lilyaka1.github.io/fb_pr9/)
 - [Публичная страница на 11 практику GitHub Pages](https://lilyaka1.github.io/fb_pr9/index_v1.html)
-- [Публичная страница на 12 практику GitHub Pages](https://lilyaka1.github.io/fb_pr9/pages/index_v2.html)
-- [Публичная страница на 13 практику GitHub Pages](https://lilyaka1.github.io/fb_pr9/)
+- [Публичная страница на 12 практику GitHub Pages](https://lilyaka1.github.io/fb_pr9/index_v12.html)
+- [Публичная страница на 13 практику GitHub Pages](https://lilyaka1.github.io/fb_pr9/index_v13.html)
 - [Публичная страница на 15 практику GitHub Pages](https://lilyaka1.github.io/fb_pr9/index_v15.html)

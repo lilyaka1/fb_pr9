@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дневник обучения - Портфолио студента</title>
+    <link rel="icon" type="image/jpeg" href="../images/ico.jpg">
+    <link rel="stylesheet" href="../styles/styles.css">
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебный дневник - Портфолио студента</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Сало Вячеслав</h1>
+                    <p class="subtitle">Студент-разработчик</p>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index_v13.html" class="nav-link">Главная</a></li>
+                        <li><a href="projects_v13.html" class="nav-link">Проекты</a></li>
+                        <li><a href="diary_v13.html" class="nav-link active">Дневник</a></li>
+                        <li><a href="contacts_v13.html" class="nav-link">Контакты</a></li>
+                    </ul>
+                </nav>
+                                    </ul>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                        <span class="theme-icon">
+                            <img src="../images/light.jpg" alt="Переключить тему" id="themeImage">
+                        </span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Секция учебного прогресса -->
+        <section class="diary-page">
+            <div class="container">
+                <h2 class="section-title">Мой учебный прогресс 📚</h2>
+                
+                <!-- Записи дневника -->
+                <div class="diary-entries" id="diaryEntries">
+                    <div class="diary-entry">
+                        <div class="entry-date">13 октября 2025</div>
+                        <h3 class="entry-title">Практика 13 - Финальная структура портфолио</h3>
+                        <p class="entry-description">
+                            Создал современное портфолио с адаптивным дизайном в стиле MBDTF. 
+                            Реализовал темную тему, фильтрацию проектов и интерактивные элементы.
+                        </p>
+                        <span class="entry-status status-completed">✓ Выполнено</span>
+                    </div>
+
+                    <div class="diary-entry">
+                        <div class="entry-date">10 октября 2025</div>
+                        <h3 class="entry-title">ChatGPT Telegram Bot</h3>
+                        <p class="entry-description">
+                            Разработал телеграм бота с интеграцией OpenAI API. 
+                            Бот может отвечать на вопросы и генерировать контент используя ChatGPT.
+                        </p>
+                        <span class="entry-status status-completed">✓ Выполнено</span>
+                    </div>
+
+                    <div class="diary-entry">
+                        <div class="entry-date">5 октября 2025</div>
+                        <h3 class="entry-title">Film Recommendation System</h3>
+                        <p class="entry-description">
+                            Построил систему рекомендаций фильмов на Python с использованием ML алгоритмов. 
+                            Система анализирует предпочтения пользователя и предлагает похожие фильмы.
+                        </p>
+                        <span class="entry-status status-completed">✓ Выполнено</span>
+                    </div>
+
+                    <div class="diary-entry">
+                        <div class="entry-date">1 октября 2025</div>
+                        <h3 class="entry-title">Изучение React и современного стека</h3>
+                        <p class="entry-description">
+                            Углубленно изучаю React, TypeScript и современные инструменты разработки.
+                            Планирую создать полноценное SPA приложение.
+                        </p>
+                        <span class="entry-status status-progress">⏳ В процессе</span>
+                    </div>
+                </div>
+
+                <!-- Текущие курсы -->
+                <div class="current-courses">
+                    <h2 class="section-title">Текущие курсы</h2>
+                    <div class="courses-grid">
+                        <div class="course-item">
+                            <div class="course-header">
+                                <span class="course-name">Веб-разработка</span>
+                                <span class="course-percent">90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="course-item">
+                            <div class="course-header">
+                                <span class="course-name">JavaScript</span>
+                                <span class="course-percent">70%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+
+                        <div class="course-item">
+                            <div class="course-header">
+                                <span class="course-name">React</span>
+                                <span class="course-percent">50%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Форма добавления записи -->
+                <div class="add-entry-section">
+                    <h2 class="section-title">Добавить запись</h2>
+                    <form class="entry-form" id="entryForm">
+                        <div class="form-group">
+                            <label for="entryTitle">Название темы</label>
+                            <input type="text" id="entryTitle" name="title" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="entryDescription">Описание</label>
+                            <textarea id="entryDescription" name="description" rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="entryStatus">Статус</label>
+                            <select id="entryStatus" name="status">
+                                <option value="progress">В процессе</option>
+                                <option value="completed">Выполнено</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Добавить запись</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Портфолио студента. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Темная тема
+        const themeToggle = document.getElementById('themeToggle');
+        const themeImage = document.getElementById('themeImage');
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        themeImage.src = savedTheme === 'dark' ? '../images/dark.jpeg' : '../images/light.jpg';
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            // Анимация движения в сторону
+            themeToggle.style.transform = 'translateX(-10px) scale(0.9)';
+            setTimeout(() => {
+                themeToggle.style.transform = '';
+            }, 200);
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeImage.src = newTheme === 'dark' ? '../images/dark.jpeg' : '../images/light.jpg';
+        });
+
+        // Добавление новых записей в дневник
+        document.getElementById('entryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const title = document.getElementById('entryTitle').value;
+            const description = document.getElementById('entryDescription').value;
+            const status = document.getElementById('entryStatus').value;
+            
+            // Создаем новую запись
+            const newEntry = document.createElement('div');
+            newEntry.className = 'diary-entry';
+            newEntry.style.animation = 'slideDown 0.5s ease';
+            
+            const today = new Date().toLocaleDateString('ru-RU', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+            
+            const statusClass = status === 'completed' ? 'status-completed' : 'status-progress';
+            const statusText = status === 'completed' ? '✓ Выполнено' : '⏳ В процессе';
+            
+            newEntry.innerHTML = `
+                <div class="entry-date">${today}</div>
+                <h3 class="entry-title">${title}</h3>
+                <p class="entry-description">${description}</p>
+                <span class="entry-status ${statusClass}">${statusText}</span>
+            `;
+            
+            // Добавляем в начало списка
+            const entriesContainer = document.getElementById('diaryEntries');
+            entriesContainer.insertBefore(newEntry, entriesContainer.firstChild);
+            
+            // Очищаем форму и показываем уведомление
+            this.reset();
+            
+            // Плавное появление
+            setTimeout(() => {
+                newEntry.style.opacity = '1';
+            }, 10);
+        });
+    </script>
+</body>
+</html>

@@ -3,188 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио - Выбор версии</title>
+    <title>Практика 13 - Портфолио студента</title>
     <link rel="icon" type="image/jpeg" href="images/ico.jpg">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1200px;
-            width: 100%;
-        }
-
-        h1 {
-            text-align: center;
-            color: white;
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        .subtitle {
-            text-align: center;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-        }
-
-        .versions {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .version-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .version-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .version-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #667eea;
-            margin-bottom: 1rem;
-        }
-
-        .version-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #1e293b;
-            margin-bottom: 0.5rem;
-        }
-
-        .version-description {
-            color: #64748b;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-            flex: 1;
-        }
-
-        .version-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .tag {
-            display: inline-block;
-            padding: 0.375rem 0.75rem;
-            background: #f1f5f9;
-            color: #475569;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            .versions {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Портфолио Сало Вячеслав</h1>
-        <p class="subtitle">ИПТИП, группа ЭФБО-15-24 | Выберите версию проекта</p>
-
-        <div class="versions">
-            <!-- Версия 11 (v1) -->
-            <a href="index_v1.html" class="version-card">
-                <div class="version-number">v11</div>
-                <div class="version-title">БЭМ методология</div>
-                <div class="version-description">
-                    Практика 11: Портфолио с использованием методологии БЭМ (Блок, Элемент, Модификатор) 
-                    для структурированного CSS
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Сало Вячеслав</h1>
+                    <p class="subtitle">Студент-разработчик</p>
                 </div>
-                <div class="version-tags">
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">БЭМ</span>
-                </div>
-            </a>
-
-            <!-- Версия 12 -->
-            <a href="index_v12.html" class="version-card">
-                <div class="version-number">v12</div>
-                <div class="version-title">Bootstrap Framework</div>
-                <div class="version-description">
-                    Практика 12: Портфолио с использованием Bootstrap 5. 
-                    Компоненты, сетка, иконки, темная тема
-                </div>
-                <div class="version-tags">
-                    <span class="tag">HTML</span>
-                    <span class="tag">Bootstrap</span>
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">Responsive</span>
-                </div>
-            </a>
-
-            <!-- Версия 13 -->
-            <a href="index_v13.html" class="version-card">
-                <div class="version-number">v13</div>
-                <div class="version-title">MBDTF Theme</div>
-                <div class="version-description">
-                    Практика 13: Портфолио с темой My Beautiful Dark Twisted Fantasy. 
-                    Градиенты, темная тема, анимации
-                </div>
-                <div class="version-tags">
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">Dark Mode</span>
-                </div>
-            </a>
-
-            <!-- Версия 15 -->
-            <a href="index_v15.html" class="version-card">
-                <div class="version-number">v15</div>
-                <div class="version-title">Адаптивная вёрстка</div>
-                <div class="version-description">
-                    Практика 15: Комбинирование методов адаптивной вёрстки. 
-                    Grid, Flexbox, Media Queries, CSS-переменные
-                </div>
-                <div class="version-tags">
-                    <span class="tag">Grid</span>
-                    <span class="tag">Flexbox</span>
-                    <span class="tag">Responsive</span>
-                    <span class="tag">БЭМ</span>
-                </div>
-            </a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index_v13.html" class="nav-link active">Главная</a></li>
+                        <li><a href="pages/practice-13/projects.html" class="nav-link">Проекты</a></li>
+                        <li><a href="pages/practice-13/diary.html" class="nav-link">Дневник</a></li>
+                        <li><a href="pages/practice-13/contacts.html" class="nav-link">Контакты</a></li>
+                    </ul>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                        <span class="theme-icon">
+                            <img src="images/light.jpg" alt="Переключить тему" id="themeImage">
+                        </span>
+                    </button>
+                </nav>
+            </div>
         </div>
-    </div>
-</body>
-</html>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Секция профиля -->
+        <section class="profile">
+            <div class="container">
+                <div class="profile-content">
+                    <div class="profile-photo">
+                        <img src="images/kanye-meme-2.jpg" alt="Фото студента">
+                    </div>
+                    <div class="profile-info">
+                        <h2>Практика 13: MBDTF Theme</h2>
+                        <p class="profile-faculty">ИПТИП, группа ЭФБО-15-24</p>
+                        <p class="profile-description">
+                            Портфолио с темой My Beautiful Dark Twisted Fantasy
+                        </p>
+                        <a href="assets/resume.pdf" class="btn btn-primary" id="downloadResume" download>Резюме</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Секция навыков -->
         <section class="skills">
@@ -280,7 +148,7 @@
     <!-- Подвал -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Портфолио студента. Все права защищены.</p>
+            <p>&copy; 2025 Практика 13 - MBDTF Theme</p>
         </div>
     </footer>
 
@@ -311,7 +179,7 @@
 
         // Alert при скачивании резюме
         document.getElementById('downloadResume').addEventListener('click', (e) => {
-            alert('нет.');
+            alert('Практика 13: MBDTF Theme!');
         });
     </script>
 </body>
