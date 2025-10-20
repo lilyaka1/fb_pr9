@@ -13,8 +13,8 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #ffffff;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -23,92 +23,52 @@
         }
 
         .container {
-            max-width: 1200px;
+            text-align: center;
+            max-width: 600px;
             width: 100%;
         }
 
         h1 {
-            text-align: center;
-            color: white;
-            font-size: 3rem;
+            color: #1e293b;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
-            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         .subtitle {
-            text-align: center;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2rem;
+            color: #64748b;
+            font-size: 1.1rem;
             margin-bottom: 3rem;
         }
 
-        .versions {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .version-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-decoration: none;
-            color: inherit;
+        .buttons {
             display: flex;
             flex-direction: column;
+            gap: 1rem;
         }
 
-        .version-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .version-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #667eea;
-            margin-bottom: 1rem;
-        }
-
-        .version-title {
-            font-size: 1.5rem;
-            font-weight: 600;
+        .btn {
+            display: block;
+            padding: 1.2rem 2rem;
+            background: #f8fafc;
             color: #1e293b;
-            margin-bottom: 0.5rem;
+            text-decoration: none;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
         }
 
-        .version-description {
-            color: #64748b;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-            flex: 1;
+        .btn:hover {
+            background: #1e293b;
+            color: #ffffff;
+            border-color: #1e293b;
+            transform: translateY(-2px);
         }
 
-        .version-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .tag {
-            display: inline-block;
-            padding: 0.375rem 0.75rem;
-            background: #f1f5f9;
-            color: #475569;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-        @media (max-width: 768px) {
+        @media (max-width: 480px) {
             h1 {
                 font-size: 2rem;
-            }
-
-            .versions {
-                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -116,203 +76,14 @@
 <body>
     <div class="container">
         <h1>Портфолио Сало Вячеслав</h1>
-        <p class="subtitle">ИПТИП, группа ЭФБО-15-24 | Выберите версию проекта</p>
+        <p class="subtitle">ИПТИП, группа ЭФБО-15-24</p>
 
-        <div class="versions">
-            <!-- Версия 11 (v1) -->
-            <a href="index/index_v1.html" class="version-card">
-                <div class="version-number">v11</div>
-                <div class="version-title">БЭМ методология</div>
-                <div class="version-description">
-                    Практика 11: Портфолио с использованием методологии БЭМ (Блок, Элемент, Модификатор) 
-                    для структурированного CSS
-                </div>
-                <div class="version-tags">
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">БЭМ</span>
-                </div>
-            </a>
-
-            <!-- Версия 12 -->
-            <a href="index/index_v12.html" class="version-card">
-                <div class="version-number">v12</div>
-                <div class="version-title">Bootstrap Framework</div>
-                <div class="version-description">
-                    Практика 12: Портфолио с использованием Bootstrap 5. 
-                    Компоненты, сетка, иконки, темная тема
-                </div>
-                <div class="version-tags">
-                    <span class="tag">HTML</span>
-                    <span class="tag">Bootstrap</span>
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">Responsive</span>
-                </div>
-            </a>
-
-            <!-- Версия 13 -->
-            <a href="index/index_v13.html" class="version-card">
-                <div class="version-number">v13</div>
-                <div class="version-title">MBDTF Theme</div>
-                <div class="version-description">
-                    Практика 13: Портфолио с темой My Beautiful Dark Twisted Fantasy. 
-                    Градиенты, темная тема, анимации
-                </div>
-                <div class="version-tags">
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">Dark Mode</span>
-                </div>
-            </a>
-
-            <!-- Версия 15 -->
-            <a href="index/index_v15.html" class="version-card">
-                <div class="version-number">v15</div>
-                <div class="version-title">Адаптивная вёрстка</div>
-                <div class="version-description">
-                    Практика 15: Комбинирование методов адаптивной вёрстки. 
-                    Grid, Flexbox, Media Queries, CSS-переменные
-                </div>
-                <div class="version-tags">
-                    <span class="tag">Grid</span>
-                    <span class="tag">Flexbox</span>
-                    <span class="tag">Responsive</span>
-                    <span class="tag">БЭМ</span>
-                </div>
-            </a>
+        <div class="buttons">
+            <a href="index/index_v1.html" class="btn">Практика 11 - БЭМ</a>
+            <a href="index/index_v12.html" class="btn">Практика 12 - Bootstrap</a>
+            <a href="index/index_v13.html" class="btn">Практика 13-14 - Контрольная работа 2</a>
+            <a href="index/index_v15.html" class="btn">Практика 15 - Адаптивная вёрстка</a>
         </div>
     </div>
-</body>
-</html>
-
-        <!-- Секция навыков -->
-        <section class="skills">
-            <div class="container">
-                <h2 class="section-title">Мои навыки</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">HTML/CSS</span>
-                            <span class="skill-percent">90%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">JavaScript</span>
-                            <span class="skill-percent">80%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Bootstrap</span>
-                            <span class="skill-percent">85%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Python</span>
-                            <span class="skill-percent">75%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 75%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Секция лучших проектов -->
-        <section class="projects">
-            <div class="container">
-                <h2 class="section-title">Лучшие проекты</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <img src="images/IMG_9215.JPG" alt="Система рекомендаций фильмов" class="project-image">
-                        <div class="project-content">
-                            <h3>Film Recommendation System</h3>
-                            <p>Умная система рекомендаций фильмов с ML алгоритмами</p>
-                            <div class="project-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">ML</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image-wrapper">
-                            <img src="images/IMG_6799.PNG" alt="ChatGPT Telegram Bot" class="project-image">
-                            <div class="project-image-overlay">ChatGPT Bot</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>ChatGPT Telegram Bot</h3>
-                            <p>Телеграм бот с интеграцией OpenAI ChatGPT API</p>
-                            <div class="project-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">AI</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="images/IMG_0751.JPG" alt="Web Portfolio" class="project-image">
-                        <div class="project-content">
-                            <h3>Учебные проекты</h3>
-                            <p>Фронтенд и бэкенд разработка, контрольные работы</p>
-                            <div class="project-tags">
-                                <span class="tag">HTML/CSS</span>
-                                <span class="tag">JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Подвал -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Портфолио студента. Все права защищены.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Темная тема
-        const themeToggle = document.getElementById('themeToggle');
-        const themeImage = document.getElementById('themeImage');
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        
-        // Применяем сохраненную тему
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        themeImage.src = savedTheme === 'dark' ? 'images/dark.jpeg' : 'images/light.jpg';
-        
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            // Анимация движения в сторону
-            themeToggle.style.transform = 'translateX(-10px) scale(0.9)';
-            setTimeout(() => {
-                themeToggle.style.transform = '';
-            }, 200);
-            
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            themeImage.src = newTheme === 'dark' ? 'images/dark.jpeg' : 'images/light.jpg';
-        });
-
-        // Alert при скачивании резюме
-        document.getElementById('downloadResume').addEventListener('click', (e) => {
-            alert('нет.');
-        });
-    </script>
 </body>
 </html>

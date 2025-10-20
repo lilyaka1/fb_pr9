@@ -4,13 +4,9 @@
 - **Практика 10** — Формы и модальное окно в `contacts.html`
 - **Практика 11** — CSS переменные, БЭМ методология, интерактивные состояния и темная тема
 - **Практика 12** — Bootstrap компоненты, адаптивная сетка и готовые стили
-- **Практика 13** — Подготовка базового проекта портфолио
+- **Практика 13-14** — Контрольная работа 2
 - **Практика 15** — Комбинирование методов адаптивной вёрстки
 
 ## Ссылки
 
 - [Главная страница (выбор версии) GitHub Pages](https://lilyaka1.github.io/fb_pr9/)
-- [Публичная страница на 11 практику GitHub Pages](https://lilyaka1.github.io/fb_pr9/index/index_v1.html)
-- [Публичная страница на 12 практику GitHub Pages](https://lilyaka1.github.io/fb_pr9/index/index_v12.html)
-- [Публичная страница на 13-14 практику GitHub Pages](https://lilyaka1.github.io/fb_pr9/index/index_v13.html)
-- [Публичная страница на 15 практику GitHub Pages](https://lilyaka1.github.io/fb_pr9/index/index_v15.html)
