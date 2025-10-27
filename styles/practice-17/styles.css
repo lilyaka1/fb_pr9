@@ -1,0 +1,646 @@
+/* ========================================
+   CSS переменные
+   ======================================== */
+:root {
+    --primary-color: #0066cc;
+    --primary-hover: #0052a3;
+    --text-color: #333333;
+    --text-secondary: #666666;
+    --background: #ffffff;
+    --background-secondary: #f8f9fa;
+    --border-color: #dddddd;
+    --error-color: #dc3545;
+    --success-color: #28a745;
+    --focus-color: #0066cc;
+    --focus-shadow: rgba(0, 102, 204, 0.25);
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+/* ========================================
+   Сброс стилей и базовые настройки
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background);
+}
+
+/* ========================================
+   Screen Reader Only
+   ======================================== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ========================================
+   Skip Link
+   ======================================== */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 0 0 4px 0;
+    z-index: 1000;
+    font-weight: 600;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid var(--focus-color);
+    outline-offset: 2px;
+}
+
+/* ========================================
+   Контейнер
+   ======================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ========================================
+   Навигация
+   ======================================== */
+.navigation {
+    background: var(--background-secondary);
+    border-radius: var(--border-radius);
+    margin-bottom: 40px;
+    padding: 16px 24px;
+}
+
+.navigation__list {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.navigation__link {
+    display: inline-block;
+    padding: 12px 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: var(--transition);
+    min-width: 44px; /* WCAG 2.5.5 - минимальный размер области клика */
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation__link:hover {
+    background: rgba(0, 102, 204, 0.1);
+    color: var(--primary-color);
+}
+
+.navigation__link:focus {
+    outline: 3px solid var(--focus-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px var(--focus-shadow);
+}
+
+.navigation__link--active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.navigation__link--active:hover {
+    background: var(--primary-hover);
+    color: white;
+}
+
+/* ========================================
+   Основной контент
+   ======================================== */
+.main {
+    margin-bottom: 60px;
+}
+
+.main:focus {
+    outline: none;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    margin-bottom: 32px;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    margin-bottom: 24px;
+    margin-top: 40px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* ========================================
+   Контактная информация
+   ======================================== */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-style: normal;
+    background: var(--background-secondary);
+    padding: 24px;
+    border-radius: var(--border-radius);
+    margin-bottom: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.125rem;
+}
+
+.contact-icon {
+    flex-shrink: 0;
+    color: var(--primary-color);
+}
+
+.contact-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.contact-link:hover {
+    border-bottom-color: var(--primary-color);
+}
+
+.contact-link:focus {
+    outline: 3px solid var(--focus-color);
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+/* ========================================
+   Форма
+   ======================================== */
+.form {
+    background: var(--background-secondary);
+    padding: 32px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
+
+.form-fieldset {
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.form-legend {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+    padding: 0 8px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.required {
+    color: var(--error-color);
+    font-weight: bold;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    line-height: 1.5;
+    transition: var(--transition);
+    background: var(--background);
+    color: var(--text-color);
+}
+
+.form-input:hover,
+.form-textarea:hover {
+    border-color: var(--primary-color);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--focus-color);
+    box-shadow: 0 0 0 3px var(--focus-shadow);
+}
+
+.form-input[aria-invalid="true"],
+.form-textarea[aria-invalid="true"] {
+    border-color: var(--error-color);
+}
+
+.form-input[aria-invalid="true"]:focus,
+.form-textarea[aria-invalid="true"]:focus {
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.25);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-hint {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+.form-error {
+    display: none;
+    color: var(--error-color);
+    font-size: 0.875rem;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.form-error:not(:empty) {
+    display: block;
+}
+
+.form-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.form-counter {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Checkbox */
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.form-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.form-checkbox input[type="checkbox"]:focus {
+    outline: 3px solid var(--focus-color);
+    outline-offset: 2px;
+}
+
+.form-checkbox-label {
+    flex: 1;
+    line-height: 1.5;
+}
+
+.link-button {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.link-button:hover {
+    color: var(--primary-hover);
+}
+
+.link-button:focus {
+    outline: 3px solid var(--focus-color);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Кнопки формы */
+.form-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: inherit;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.button--primary {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.button--primary:hover {
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+.button--primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--focus-shadow);
+}
+
+.button--secondary {
+    background: transparent;
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+.button--secondary:hover {
+    background: var(--background-secondary);
+    border-color: var(--text-color);
+}
+
+.button--secondary:focus {
+    outline: none;
+    border-color: var(--focus-color);
+    box-shadow: 0 0 0 3px var(--focus-shadow);
+}
+
+/* Статус формы */
+.form-status {
+    margin-top: 24px;
+    padding: 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    display: none;
+}
+
+.form-status:not(:empty) {
+    display: block;
+}
+
+.form-status.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-status.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* ========================================
+   Модальное окно
+   ======================================== */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal[aria-hidden="false"] {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.modal-content {
+    position: relative;
+    background: var(--background);
+    border-radius: var(--border-radius);
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: var(--transition);
+    color: var(--text-color);
+}
+
+.modal-close:hover {
+    background: var(--background-secondary);
+}
+
+.modal-close:focus {
+    outline: 3px solid var(--focus-color);
+    outline-offset: 2px;
+}
+
+.modal-body {
+    padding: 24px;
+}
+
+.modal-body h3 {
+    font-size: 1.25rem;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    color: var(--text-color);
+}
+
+.modal-body p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.modal-body ul {
+    margin-left: 24px;
+    margin-bottom: 16px;
+}
+
+.modal-body li {
+    margin-bottom: 8px;
+}
+
+.modal-footer {
+    padding: 24px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+.footer {
+    background: var(--background-secondary);
+    padding: 24px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    margin-top: 60px;
+}
+
+.footer p {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer a:focus {
+    outline: 3px solid var(--focus-color);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .form {
+        padding: 24px 16px;
+    }
+    
+    .form-fieldset {
+        padding: 16px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .button {
+        width: 100%;
+    }
+}
+
+/* ========================================
+   High Contrast Mode Support
+   ======================================== */
+@media (prefers-contrast: high) {
+    :root {
+        --border-color: #000000;
+        --text-color: #000000;
+        --background: #ffffff;
+    }
+    
+    .button,
+    .form-input,
+    .form-textarea {
+        border-width: 2px;
+    }
+}

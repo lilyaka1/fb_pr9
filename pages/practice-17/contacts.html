@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контактная информация и форма обратной связи с полной поддержкой доступности">
+    <title>Контакты - Практика 17</title>
+    <link rel="stylesheet" href="../../styles/practice-17/styles.css">
+</head>
+<body>
+    <!-- Skip Link для быстрого перехода к контенту -->
+    <a href="#main-content" class="skip-link">Перейти к основному содержимому</a>
+
+    <div class="container">
+        <!-- Навигация -->
+        <nav class="navigation" aria-label="Основная навигация">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="../../index/index_v17.html" class="navigation__link">Главная</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="contacts.html" 
+                       class="navigation__link navigation__link--active" 
+                       aria-current="page">
+                       Контакты
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Основной контент -->
+        <main id="main-content" class="main" tabindex="-1">
+            <h1 class="page-title">Контакты</h1>
+
+            <!-- Контактная информация -->
+            <section aria-labelledby="contact-info-title">
+                <h2 id="contact-info-title" class="section-title">Наши контакты</h2>
+                
+                <address class="contact-info">
+                    <div class="contact-item">
+                        <svg class="contact-icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>
+                            <span class="sr-only">Адрес:</span>
+                            г. Москва, ул. Примерная, д. 1
+                        </span>
+                    </div>
+
+                    <div class="contact-item">
+                        <svg class="contact-icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                            <path d="m3 8 9 6 9-6"></path>
+                        </svg>
+                        <a href="mailto:example@example.com" class="contact-link">
+                            <span class="sr-only">Email:</span>
+                            example@example.com
+                        </a>
+                    </div>
+
+                    <div class="contact-item">
+                        <svg class="contact-icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <a href="tel:+74951234567" class="contact-link">
+                            <span class="sr-only">Телефон:</span>
+                            +7 (495) 123-45-67
+                        </a>
+                    </div>
+                </address>
+            </section>
+
+            <!-- Форма обратной связи -->
+            <section aria-labelledby="feedback-form-title">
+                <h2 id="feedback-form-title" class="section-title">Форма обратной связи</h2>
+                
+                <form id="contactForm" class="form" novalidate>
+                    <!-- Личные данные -->
+                    <fieldset class="form-fieldset">
+                        <legend class="form-legend">Личные данные</legend>
+
+                        <div class="form-group">
+                            <label for="name" class="form-label">
+                                Имя <span class="required" aria-label="обязательное поле">*</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name"
+                                class="form-input"
+                                autocomplete="name"
+                                aria-required="true"
+                                aria-describedby="name-hint"
+                            >
+                            <div id="name-hint" class="form-hint">Введите ваше имя</div>
+                            <div id="name-error" class="form-error" role="alert"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">
+                                Email <span class="required" aria-label="обязательное поле">*</span>
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email"
+                                class="form-input"
+                                autocomplete="email"
+                                aria-required="true"
+                                aria-describedby="email-hint"
+                            >
+                            <div id="email-hint" class="form-hint">example@mail.com</div>
+                            <div id="email-error" class="form-error" role="alert"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Телефон</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone"
+                                class="form-input"
+                                autocomplete="tel"
+                                aria-describedby="phone-hint"
+                            >
+                            <div id="phone-hint" class="form-hint">+7 (xxx) xxx-xx-xx</div>
+                            <div id="phone-error" class="form-error" role="alert"></div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Сообщение -->
+                    <fieldset class="form-fieldset">
+                        <legend class="form-legend">Ваше сообщение</legend>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">
+                                Тема <span class="required" aria-label="обязательное поле">*</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="subject" 
+                                name="subject"
+                                class="form-input"
+                                aria-required="true"
+                                aria-describedby="subject-hint"
+                            >
+                            <div id="subject-hint" class="form-hint">Кратко опишите тему обращения</div>
+                            <div id="subject-error" class="form-error" role="alert"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">
+                                Текст сообщения <span class="required" aria-label="обязательное поле">*</span>
+                            </label>
+                            <textarea 
+                                id="message" 
+                                name="message"
+                                class="form-textarea"
+                                rows="6"
+                                maxlength="500"
+                                aria-required="true"
+                                aria-describedby="message-hint message-counter"
+                            ></textarea>
+                            <div class="form-meta">
+                                <div id="message-hint" class="form-hint">Подробно опишите ваш вопрос или предложение</div>
+                                <div id="message-counter" class="form-counter" aria-live="polite">0/500</div>
+                            </div>
+                            <div id="message-error" class="form-error" role="alert"></div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Согласие -->
+                    <div class="form-group">
+                        <label class="form-checkbox">
+                            <input 
+                                type="checkbox" 
+                                id="agreement" 
+                                name="agreement"
+                                aria-required="true"
+                                aria-describedby="agreement-error"
+                            >
+                            <span class="form-checkbox-label">
+                                Я согласен с <button type="button" class="link-button" id="openModalBtn">политикой обработки персональных данных</button>
+                                <span class="required" aria-label="обязательное поле">*</span>
+                            </span>
+                        </label>
+                        <div id="agreement-error" class="form-error" role="alert"></div>
+                    </div>
+
+                    <!-- Кнопки -->
+                    <div class="form-actions">
+                        <button type="submit" class="button button--primary">
+                            Отправить
+                            <span class="sr-only">форму обратной связи</span>
+                        </button>
+                        <button type="reset" class="button button--secondary">
+                            Очистить
+                            <span class="sr-only">все поля формы</span>
+                        </button>
+                    </div>
+
+                    <!-- Живая область для объявления результата -->
+                    <div id="formStatus" class="form-status" role="status" aria-live="polite" aria-atomic="true"></div>
+                </form>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer" role="contentinfo">
+            <p>&copy; 2025 Практика 17 - A11y-аудит | 
+               <a href="https://github.com/lilyaka1" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-overlay" data-close-modal></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title" class="modal-title">Политика обработки персональных данных</h2>
+                <button type="button" class="modal-close" data-close-modal aria-label="Закрыть модальное окно">
+                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Настоящая Политика конфиденциальности персональных данных (далее – Политика конфиденциальности) действует в отношении всей информации, которую данный сайт может получить о Пользователе во время использования сайта.</p>
+                
+                <h3>1. Определение терминов</h3>
+                <p>1.1. В настоящей Политике конфиденциальности используются следующие термины:</p>
+                <ul>
+                    <li><strong>Персональные данные</strong> – любая информация, относящаяся к прямо или косвенно определенному или определяемому физическому лицу.</li>
+                    <li><strong>Обработка персональных данных</strong> – любое действие с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение, извлечение, использование, передачу, обезличивание, блокирование, удаление, уничтожение.</li>
+                </ul>
+
+                <h3>2. Общие положения</h3>
+                <p>2.1. Использование Пользователем сайта означает согласие с настоящей Политикой конфиденциальности и условиями обработки персональных данных Пользователя.</p>
+                <p>2.2. В случае несогласия с условиями Политики конфиденциальности Пользователь должен прекратить использование сайта.</p>
+
+                <h3>3. Цели сбора персональной информации</h3>
+                <p>3.1. Персональные данные Пользователя используются в целях:</p>
+                <ul>
+                    <li>Обратной связи с Пользователем</li>
+                    <li>Предоставления информации по запросу Пользователя</li>
+                    <li>Улучшения качества услуг</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="button button--primary" data-close-modal>Понятно</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../scripts/practice-17/modal.js"></script>
+    <script src="../../scripts/practice-17/validation.js"></script>
+</body>
+</html>

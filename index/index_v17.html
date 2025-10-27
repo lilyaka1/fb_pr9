@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика 17 - A11y аудит</title>
+    <link rel="stylesheet" href="../styles/practice-17/styles_v17.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Навигация -->
+        <nav class="navigation">
+            <div class="navigation__links">
+                <a href="index_v17.html" class="navigation__link navigation__link--active">Главная</a>
+                <a href="../pages/practice-17/contacts.html" class="navigation__link">Контакты</a>
+            </div>
+        </nav>
+
+        <main class="main">
+            <!-- Секция 1: Простое адаптивное изображение -->
+            <section class="section">
+                <h2 class="section__title">1. Базовое адаптивное изображение</h2>
+                <div class="image-container">
+                    <img src="../images/landscape.jpg" 
+                         alt="Красивый пейзаж"
+                         class="responsive-image">
+                </div>
+                <div class="explanation">
+                    <h3>Что происходит:</h3>
+                    <ul>
+                        <li>Изображение занимает 100% ширины контейнера</li>
+                        <li>Высота автоматически рассчитывается для сохранения пропорций</li>
+                        <li>Работает на всех устройствах</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Секция 2: Picture element с форматами -->
+            <section class="section">
+                <h2 class="section__title">2. Picture element с форматами</h2>
+                <div class="image-container">
+                    <picture>
+                        <!-- Разные источники -->
+                        <source srcset="../images/photo.jpg" type="image/jpeg">
+                        <!-- Фолбэк -->
+                        <img src="../images/photo.jpg" 
+                             alt="Портрет"
+                             class="responsive-image">
+                    </picture>
+                </div>
+                <div class="explanation">
+                    <h3>Что происходит:</h3>
+                    <ul>
+                        <li>Браузер выбирает лучший формат для отображения</li>
+                        <li>Автоматическое переключение между форматами</li>
+                        <li>Фолбэк для старых браузеров</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Секция 3: Разные изображения для разных размеров экрана -->
+            <section class="section">
+                <h2 class="section__title">3. Разные изображения для разных экранов</h2>
+                <div class="image-container">
+                    <picture>
+                        <!-- Большое изображение для десктопов -->
+                        <source media="(min-width: 1200px)" 
+                                srcset="../images/desktop.jpg">
+                        <!-- Среднее для планшетов -->
+                        <source media="(min-width: 768px)" 
+                                srcset="../images/tablet.jpg">
+                        <!-- Маленькое для мобильных -->
+                        <img src="../images/mobile.jpg" 
+                             alt="Адаптивное изображение для разных устройств"
+                             class="responsive-image">
+                    </picture>
+                </div>
+                <div class="explanation">
+                    <h3>Что происходит:</h3>
+                    <ul>
+                        <li>Десктопы: desktop.jpg (1200px+)</li>
+                        <li>Планшеты: tablet.jpg (768px-1199px)</li>
+                        <li>Мобильные: mobile.jpg (до 767px)</li>
+                        <li>Браузер сам выбирает подходящее изображение</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Секция 4: Retina display поддержка -->
+            <section class="section">
+                <h2 class="section__title">4. Поддержка Retina дисплеев</h2>
+                <div class="image-container">
+                    <img src="../images/ico.jpg" 
+                         srcset="../images/ico.jpg 1x, ../images/ico.jpg 2x"
+                         alt="Иконка с поддержкой Retina"
+                         class="retina-image">
+                </div>
+                <div class="explanation">
+                    <h3>Что происходит:</h3>
+                    <ul>
+                        <li>Обычные экраны: стандартное разрешение</li>
+                        <li>Retina экраны: изображение в 2 раза четче</li>
+                        <li>Автоматическое определение плотности пикселей</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Секция 5: Object-fit демонстрация -->
+            <section class="section">
+                <h2 class="section__title">5. Object-fit свойства</h2>
+                <div class="object-fit-demo">
+                    <div class="object-fit-item">
+                        <img src="../images/square.jpg" 
+                             alt="Cover пример"
+                             class="object-fit-cover">
+                        <span>object-fit: cover</span>
+                    </div>
+                    <div class="object-fit-item">
+                        <img src="../images/square.jpg" 
+                             alt="Contain пример"
+                             class="object-fit-contain">
+                        <span>object-fit: contain</span>
+                    </div>
+                    <div class="object-fit-item">
+                        <img src="../images/square.jpg" 
+                             alt="Fill пример"
+                             class="object-fit-fill">
+                        <span>object-fit: fill</span>
+                    </div>
+                </div>
+                <div class="explanation">
+                    <h3>Что происходит:</h3>
+                    <ul>
+                        <li><strong>cover</strong> - заполняет контейнер, обрезая края</li>
+                        <li><strong>contain</strong> - вписывает полностью, могут быть поля</li>
+                        <li><strong>fill</strong> - растягивает, искажая пропорции</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Секция 6: Адаптивная галерея -->
+            <section class="section">
+                <h2 class="section__title">6. Адаптивная галерея</h2>
+                <div class="gallery">
+                    <div class="gallery__item">
+                        <img src="../images/gallery1.jpg" 
+                             alt="Галерея 1"
+                             class="gallery__image">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="../images/gallery2.jpg" 
+                             alt="Галерея 2"
+                             class="gallery__image">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="../images/kanye-meme-3.jpg" 
+                             alt="Галерея 3"
+                             class="gallery__image">
+                    </div>
+                    <div class="gallery__item">
+                        <img src="../images/kanye-meme-4.jpeg" 
+                             alt="Галерея 4"
+                             class="gallery__image">
+                    </div>
+                </div>
+                <div class="explanation">
+                    <h3>Что происходит:</h3>
+                    <ul>
+                        <li><strong>На десктопах:</strong> 4 изображения в ряд</li>
+                        <li><strong>На планшетах:</strong> 2 изображения в ряд</li>
+                        <li><strong>На мобильных:</strong> 1 изображение в ряд</li>
+                        <li><strong>Особенности:</strong> Плавное масштабирование, сохранение пропорций</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Измените размер окна браузера чтобы увидеть адаптивность в действии!</p>
+        </footer>
+    </div>
+</body>
+</html>
